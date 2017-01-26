@@ -19,17 +19,11 @@ public class LargestPalindromeProduct
 		}
 		return backwardsN;
 	}
-	public static boolean isPalindrome(int n)
-	{
-		if(n == reverseN(n))
-			return true;
-		return false;
-	}
 
 	public static void main(String[] args)
 	{
 		int result = 0;
-		int var1 = 0, var2 = 0;
+		int factor1 = 0, factor2 = 0;
 		long start = System.nanoTime();//takes in System start time of program
 
         for(int i = 100;i <=999;i++)
@@ -38,12 +32,12 @@ public class LargestPalindromeProduct
             {
 
 
-				if (isPalindrome(i*j)){
+				if (reverseN(i*j)==i*j){
 					if (i*j > result)
 					{
 						result = i * j;
-						var1 = i;
-						var2 = j;
+						factor1 = i;
+						factor2 = j;
 
 					}
 				}
@@ -51,7 +45,7 @@ public class LargestPalindromeProduct
             }
 		}
 
-		System.out.println(var1 + " x " + var2 + " = " + result);
+		System.out.println(factor1 + " x " + factor2 + " = " + result);
 		double elapsed = (System.nanoTime() - start) / 1e6; //line from LargestPrimeFactor in-class assignment to calculate the elapsed time
 		System.out.println("Elapsed time: " + elapsed + "ms");//line from LargestPrimeFactor in-class assignment to print out the elapsed time
 
