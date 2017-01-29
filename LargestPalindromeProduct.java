@@ -9,6 +9,9 @@ import java.math.*;
 
 public class LargestPalindromeProduct
 {
+	/**
+	* Checks to see if the number is a palindrome
+	*/
 	public static int reverseN(int n)
 	{
 		int backwardsN = 0;
@@ -19,7 +22,10 @@ public class LargestPalindromeProduct
 		}
 		return backwardsN;
 	}
-
+	/**
+	* Finds the largest palindrome made from the product of
+	* 3-digit numbers
+	*/
 	public static void main(String[] args)
 	{
 		int result = 0;
