@@ -17,8 +17,8 @@ public class LargestPalindromeProduct
 		int backwardsN = 0;
 		while (n > 0)
 		{
-			backwardsN = 10 * backwardsN + n % 10;
-			n = n / 10;
+			backwardsN = (backwardsN << 1 | n & 1);
+			n = n >> 1;
 		}
 		return backwardsN;
 	}
