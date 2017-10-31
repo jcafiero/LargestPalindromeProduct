@@ -55,7 +55,5 @@ public class LargestPalindromeProduct
 		double elapsed = (System.nanoTime() - start) / 1e6; //line from LargestPrimeFactor in-class assignment to calculate the elapsed time
 		System.out.println("Elapsed time: " + elapsed + "ms");//line from LargestPrimeFactor in-class assignment to print out the elapsed time
 
-
-
 	}
 }
